@@ -1,0 +1,109 @@
+<html>
+<head>
+  <script src="./cswebgrid.js"></script>
+  <link href="./cswebgrid.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script>
+    var testData = {
+        testObjects: [],
+
+        init: function() {
+            test1 = Object.create(testObject);
+            test1.name = "Foo";
+            test1.email = "foo@foo.com";
+            test1.domain = "foobar";
+            test1.location = "Norcross";
+            test1.class = "math";
+            this.testObjects.push(test1);
+
+            test2 = Object.create(testObject);
+            test2.name = "Brian";
+            test2.email = "brian@humdinger.com";
+            test2.domain = "therock";
+            test2.location = "Tucson";
+            test2.class = "science";
+            this.testObjects.push(test2);
+
+            test3 = Object.create(testObject);
+            test3.name = "Miggymack";
+            test3.email = "miggymack@blah.com";
+            test3.domain = "therock";
+            test3.location = "San Diego";
+            test3.class = "computers";
+            this.testObjects.push(test3);
+
+            test4 = Object.create(testObject);
+            test4.name = "Codiferous";
+            test4.email = "codetocode@code.com";
+            test4.domain = "blingblang";
+            test4.location = "Dominican Republic";
+            test4.class = "english";
+            this.testObjects.push(test4);
+
+            test5 = Object.create(testObject);
+            test5.name = "Blart";
+            test5.email = "paulblart@blartyblart.com";
+            test5.domain = "blartcom";
+            test5.location = "Houston";
+            test5.class = "spanish";
+            this.testObjects.push(test5);
+
+            test6 = Object.create(testObject);
+            test6.name = "Toodles";
+            test6.email = "toodles@away.com";
+            test6.domain = "msrr";
+            test6.location = "Maine";
+            test6.class = "Basket Weaving";
+            this.testObjects.push(test6);
+
+            test7 = Object.create(testObject);
+            test7.name = "Yarroo";
+            test7.email = "himhem@gem.com";
+            test7.domain = "rifraff";
+            test7.location = "London";
+            test7.class = "Hero 101";
+            this.testObjects.push(test7);
+
+            test8 = Object.create(testObject);
+            test8.name = "Lorem";
+            test8.email = "ipsum@ip.com";
+            test8.domain = "ipsumthing";
+            test8.location = "LA";
+            test8.class = "History";
+            this.testObjects.push(test8);
+        }
+    }
+
+    var testObject = {
+        name: "",
+        email: "",
+        domain: "",
+        location: "",
+        class: "",
+        blah: ""
+    }
+
+    function testAlert(gridItem){
+      alert(gridItem);
+    }
+
+    function RunTest() {
+        var test = Object.create(testData);
+        test.init();
+        var grid = Object.create(csWebGrid);
+        grid.init("csWebGridContainer", test.testObjects);
+        grid.addOnClick(0,testAlert);
+        $("#extraMessage").html("Notice the ability to add click events to columns. Try clicking anything in the name column.");
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="Click to create grid" onclick="RunTest()"/>
+  <div id="extraMessage"></div>
+  <div id="csWebGridContainer" style="width: 350px;"></div>
+</body>
+</html>
