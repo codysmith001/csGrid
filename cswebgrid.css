@@ -1,0 +1,60 @@
+﻿body {
+}
+
+.csWebGridDefault {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 75px;
+    padding-left: 4px;
+    border: 1px solid transparent;
+}
+
+.csWebGridRowHeader{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: #D4E9FA;
+    height: 35px;
+    border: 1px solid #ADD8E6;
+    position: relative;
+    vertical-align: top;
+}
+
+.csWebGridInnerContainer{
+    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: 450px;
+}
+
+.csWebGridHeader{
+    background-color: #D4E9FA;
+    border: 1px solid #ADD8E6;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: center;
+}
+
+.csWebGridRow {
+    white-space: nowrap;
+    text-align: left;
+}
+
+.csWebGridRowOdd{
+    background-color: #E8E8E8;
+}
+
+.csWebGridRowEven{
+    background-color: white;
+}
+
+.csWebGridContainer{
+    width: 100%;
+    margin-top: 10px;
+    height: 500px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+}
